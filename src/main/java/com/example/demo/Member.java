@@ -1,6 +1,5 @@
-package com.example.demo.controller;
+package com.example.demo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
