@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.aspectj.apache.bcel.classfile.Code;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +32,4 @@ public class QuizController {
     }
 }
 
-record  Code(int value)
-{
-
-}
+record Code(int value) {}
