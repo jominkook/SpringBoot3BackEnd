@@ -1,6 +1,7 @@
 package com.example.demo;
 
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -78,6 +79,25 @@ class MemberRepositoryTest {
 
         //then
         assertThat(memberRepository.findAll().size()).isZero();
+    }
+
+    @AfterEach
+    public void cleanUp() {
+        memberRepository.deleteAll();
+    }
+
+    @Sql("/insert-members.sql")
+    @Test
+    void update() {
+
+        //given
+        Member member = memberRepository.findById(2L).get();
+
+        //when
+        member.changeName("BC");
+
+        //then
+        assertThat(memberRepository.findById(2L).get().getName()).isEqualTo("BC");
     }
 
 }
