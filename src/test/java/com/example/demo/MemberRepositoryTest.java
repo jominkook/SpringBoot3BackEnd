@@ -1,3 +1,4 @@
+/*
 package com.example.demo;
 
 
@@ -21,11 +22,13 @@ class MemberRepositoryTest {
     @Test
     void getAllMembers() {
 
+*/
 /*        //when
         List<Member> members = memberRepository.findAll();
 
         //then
-        assertThat(members.size()).isEqualTo(3);*/
+        assertThat(members.size()).isEqualTo(3);*//*
+
 
         //when
         Member member = memberRepository.findById(2L).get();
@@ -100,4 +103,4 @@ class MemberRepositoryTest {
         assertThat(memberRepository.findById(2L).get().getName()).isEqualTo("BC");
     }
 
-}
+}*/

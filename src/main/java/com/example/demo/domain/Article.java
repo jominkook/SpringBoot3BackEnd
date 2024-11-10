@@ -1,20 +1,22 @@
-package com.example.demo;
+package com.example.demo.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Article {
 
-    //게터
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @Getter
+
     @Column(name = "title", nullable = false)
     private String title;
 
@@ -27,8 +29,5 @@ public class Article {
         this.content = content;
     }
 
-    protected Article() {
-
-    }
 
 }
