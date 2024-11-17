@@ -40,3 +40,26 @@ if(modifyButton) {
 
     })
 }
+//등록기능
+//id가 create-btn인 엘리먼트
+const createButton = document.getElementById("create-btn");
+
+if(createButton) {
+    createButton.addEventListener("click",(event) => {
+        fetch("/api/articles",{
+            method:"POST",
+            header: {
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify({
+                title:document.getElementById("title").value,
+                content: document.getElementById("content").value,
+
+            }),
+
+        }).then(()=> {
+            alert("등록 완료되었습니다.");
+            location.replace("/articles");
+        });
+    });
+}
