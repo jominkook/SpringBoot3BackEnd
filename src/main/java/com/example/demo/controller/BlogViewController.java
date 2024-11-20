@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.domain.Article;
 import com.example.demo.dto.ArticleListViewResponse;
 import com.example.demo.dto.ArticleViewResponse;
-import com.example.demo.dto.BlogService;
+import com.example.demo.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

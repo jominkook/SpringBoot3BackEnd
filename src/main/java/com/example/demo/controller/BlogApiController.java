@@ -4,7 +4,7 @@ package com.example.demo.controller;
 import com.example.demo.dto.AddArticleRequest;
 import com.example.demo.domain.Article;
 import com.example.demo.dto.ArticleResponse;
-import com.example.demo.dto.BlogService;
+import com.example.demo.service.BlogService;
 import com.example.demo.dto.UpdateArticleRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
