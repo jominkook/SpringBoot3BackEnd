@@ -1,6 +1,5 @@
 package com.example.demo.config.jwt;
 
-import ch.qos.logback.classic.spi.ConfiguratorRank;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
