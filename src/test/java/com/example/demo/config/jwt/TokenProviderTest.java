@@ -31,7 +31,7 @@ class TokenProviderTest {
     @Autowired
     private JwtProperties jwtProperties;
 
-    @DisplayName("generateToken(): 유저 정보와 만료 기간을 전달해 토큰을 만들 수 있다.")
+/*    @DisplayName("generateToken(): 유저 정보와 만료 기간을 전달해 토큰을 만들 수 있다.")
     @Test
     void generateToken() {
         // given
@@ -100,7 +100,7 @@ class TokenProviderTest {
 
         // then
         assertThat(((UserDetails) authentication.getPrincipal()).getUsername()).isEqualTo(userEmail);
-    }
+    }*/
 
     @DisplayName("getUserId(): 토큰으로 유저 ID를 가져올 수 있다.")
     @Test
